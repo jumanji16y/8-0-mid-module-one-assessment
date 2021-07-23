@@ -26,7 +26,19 @@ const animals = [
  * getTotalCount(animals); //> 28
  * getTotalCount([]); //> 0 // returns 0 if the input array is empty
  */
-function getTotalCount(animals) {}
+  //Function adds up all of the numbers of the `count` the `animals` array and returns a cumulative total.
+function getTotalCount(animals) {
+  // 1. Determine our initial vaule. (And, recommended: write the return immediately.)
+  let result = 0;
+  // 2. Define your loop.
+  for(let i = 0; i < animals.length; i++) {
+    // 3. Accumulate!
+    const animal = animals[i];
+    result = result + animal.count;
+  }
+  console.log(result);
+  return result
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -40,7 +52,23 @@ function getTotalCount(animals) {}
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+  // Function returns an array with the kind of animal from each object from inside the `animals` array
+function getAllKinds(animals) {
+  // 1. Determine our initial vaule. (And, recommended: write the return immediately.)
+  let result = [];
+  // 2. Define your loop.
+  for(let i = 0; i < animals.length; i++) {
+    // 3. Accumulate!
+    const animal = animals[i];
+    result = result + animal.kind + ', ';
+    
+   
+  }
+
+  console.log(animals);
+  result = result.slice(0, result.length-2)
+  return result;
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -59,7 +87,22 @@ function getAllKinds(animals) {}
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+  // Function gives us a return that has all objects inside the given array
+  // Array should have `count` where it is >= the minimum amount of that count
+function filterByCountMinimum(animals, minimum) {
+  // 1. Determine our initial vaule. (And, recommended: write the return immediately.)
+  let result = [];
+  // 2. Define your loop.
+  for(let i = 0; i < animals.length; i++) {
+    // 3. Accumulate!
+    const animal = animals[i];
+    if(animal.count >= minimum) {
+      result.push(animal.count);
+    }
+  }
+  console.log(result);
+  return result;
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -73,7 +116,19 @@ function filterByCountMinimum(animals, minimum) {}
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
+function getMostCommonAnimal(animals) {
+  // 1. Determine our initial vaule. (And, recommended: write the return immediately.)
+  let result = {};
+  // 2. Define your loop.
+  for(let i = 0; i < animals.length; i++) {
+  // 3. Accumulate!
+  const animal = animals[i];
+   if (animals.count < getMostCommonAnimal.count);
+  }
+
+  console.log(animals)
+  return result;
+}
 
 // Do not change anything below this line.
 module.exports = {
